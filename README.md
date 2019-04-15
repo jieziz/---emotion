@@ -1,2 +1,2 @@
 # ---emotion
-springboot
+springboot + jpa + springmvc + shrio + redis
