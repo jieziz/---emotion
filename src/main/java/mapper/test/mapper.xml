@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<mapper namespace="com.bingo.sales.sys.dao.SysLogMapper">
+	 <!-- 查询所有 -->
+	<select id="findAll" parameterType="com.bingo.sales.sys.entity.SysLog"
+		resultMap="logMap">
+		SELECT * FROM sl_sys_log
+		<where>
+			<if test="opertator != null and opertator != ''">and operator like '%${opertator}%'</if>
+			<if test="module != null and module != ''">and module like '%${module}%'</if>
+		</where>
+		ORDER BY id DESC
+	</select>
+	<resultMap id="logMap" type="com.bingo.sales.sys.entity.SysLog">
+		<result property="module" column="module" />
+		<result property="operateIp" column="operate_ip" />
+		<result property="operateName" column="operate_name" />
+		<result property="operateTime" column="operate_time" />
+		<result property="opertator" column="operator" />
+		<result property="success" column="success" />
+		<result property="opertionType" column="operate_type" />
+	</resultMap>
+</mapper>
