@@ -97,9 +97,6 @@ public class IndexAction {
 	 * 获取在线用户(查询Redis中的RefreshToken)
 	 * 
 	 * @param
-	 * @return com.wang.model.common.ResponseBean
-	 * @author Wang926454
-	 * @date 2018/9/6 9:58
 	 */
 	@GetMapping("/online")
 	@ResponseBody

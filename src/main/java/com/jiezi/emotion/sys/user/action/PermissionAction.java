@@ -22,9 +22,6 @@ import com.jiezi.emotion.sys.user.entity.Permission;
 import com.jiezi.emotion.sys.user.entity.Role;
 import com.jiezi.emotion.sys.user.entity.RoleResourcePermission;
 import com.jiezi.emotion.sys.user.service.PermissionService;
-import com.jiezi.emotion.sys.user.service.ResourceService;
-import com.jiezi.emotion.sys.user.service.RoleService;
-import com.jiezi.emotion.sys.user.service.UserService;
 
 @RestController
 @RequestMapping("/sys/permission")

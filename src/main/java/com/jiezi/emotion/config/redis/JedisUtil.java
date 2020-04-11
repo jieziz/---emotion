@@ -15,8 +15,7 @@ import redis.clients.jedis.JedisPool;
 
 /**
  * JedisUtil(推荐存Byte数组，存Json字符串效率更慢)
- * @author Wang926454
- * @date 2018/9/4 15:45
+ * @author zhangliang
  */
 @Component
 public class JedisUtil {

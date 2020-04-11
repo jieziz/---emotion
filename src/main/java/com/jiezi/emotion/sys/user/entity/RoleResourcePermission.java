@@ -50,12 +50,6 @@ public class RoleResourcePermission extends BaseEntity<Long> {
 	private Long resourceId;
 	
 	/**
-	 * 资源名称
-	 */
-	@Transient
-	private String resourceName;
-	
-	/**
 	 * 资源权限名称
 	 */
 	@Column(name = "name")
@@ -74,6 +68,10 @@ public class RoleResourcePermission extends BaseEntity<Long> {
 	@Column(name = "permission_names")
 	private  String  permissionNames;
 
-
+	/**
+	 * 资源名称
+	 */
+	@Transient
+	private String resourceName;
 
 }

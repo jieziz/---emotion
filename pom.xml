@@ -172,14 +172,14 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>2.9.0</version><!--$NO-MVN-MAN-VER$-->
+			<version>2.9.0</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
-		
+
 		<!-- LogBack -->
 		<dependency>
-		  <groupId>ch.qos.logback</groupId>
-		  <artifactId>logback-classic</artifactId>
-		  <version>1.2.3</version><!--$NO-MVN-MAN-VER$-->
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 
 
@@ -188,7 +188,7 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-	
+
 	</dependencies>
 
 	<build>
@@ -196,6 +196,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork><!-- 如果没有该配置，热部署的devtools不生效 -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

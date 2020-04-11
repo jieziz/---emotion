@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,10 +16,12 @@ import java.util.Date;
  * <p> 抽象实体基类，提供统一的ID，和相关的基本功能方法
  */
 @MappedSuperclass
+@Data
+@EqualsAndHashCode(callSuper=true)//使用后会调用父类重写的方法
 public abstract class BaseEntity<ID extends Serializable> extends AbstractEntity<ID> {
 
     /**
-	 * 
+	 * 序列化
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -31,30 +37,5 @@ public abstract class BaseEntity<ID extends Serializable> extends AbstractEntity
 	
 	
 
-    public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createAt) {
-		this.createdAt = createAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updateAt) {
-		this.updatedAt = updateAt;
-	}
-
-	@Override
-    public ID getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(ID id) {
-        this.id = id;
-    }
 
 }

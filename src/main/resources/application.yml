@@ -38,7 +38,6 @@ spring:
         show-sql: true
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
         
-        
     aop:
         proxy-target-class: true
         
@@ -57,7 +56,6 @@ spring:
 #          static-path-pattern: /**
 #        resources:
 #           static-locations: file:${web.upload-path}
-            
           
     mybatis:
         mapperLocations: classpath:mapper/**/*.xml
